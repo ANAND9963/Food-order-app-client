@@ -9,6 +9,7 @@ import { Navbar } from './components/Navbar/Navbar';
 import { darkTheme } from './Theme/DarkTheme';
 import Home from './components/Home/Home';
 import RestaurantDetails from './components/Restaurant/RestaurantDetails';
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
         <Navbar/>
       
       {/* <Home/> */}
-      <RestaurantDetails/>
+      {/* <RestaurantDetails/> */}
+
+      <Cart/>
       
     </ThemeProvider>
 

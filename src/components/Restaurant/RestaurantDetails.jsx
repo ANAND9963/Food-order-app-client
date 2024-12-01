@@ -12,10 +12,10 @@ const foodTypes =[
     {label:"All", value:"all"},
     {label:"vegetarian only" , value:"vegetrian"},
     {label:"Non-vegetarian only" , value:"non_vegetrian"},
-    {label:"Seasonal " , value:"Seasonal"},
+    {label:"Seasonal " , value:"Seasonal"}
 ]
 
-const menu =[1,1,1,1,1,1,,1,1];
+const menu = [1,1,1,1,1,1,1,1]
 
 const RestaurantDetails = () => {
 
@@ -48,7 +48,7 @@ const RestaurantDetails = () => {
             <Grid item xs={12} lg={6}>
               <img
                 className="w-full h-[40vh] object-cover"
-                src="https://lh3.googleusercontent.com/p/AF1QipOYgHAKbYvvG7iOyNGSktscbCONBx73LZ2jHvTO=s680-w680-h510"
+                src="https://images.pexels.com/photos/2788792/pexels-photo-2788792.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt=""
               />
             </Grid>
@@ -87,7 +87,7 @@ const RestaurantDetails = () => {
               >Food Type</Typography>
               <FormControl className="py-10 space-y-5 " component={"fieldset"}>
                 <RadioGroup onChange={handleFilter} name="food_type" value={foodType}>
-                    {foodTypes.map((item)=> <FormControlLabel  key={item} value={item.value} control={<Radio />} label={item.label} />)}
+                    {foodTypes.map((item ,idx)=> <FormControlLabel  key={idx} value={item.value} control={<Radio />} label={item.label} />)}
 
                 </RadioGroup>
               </FormControl>
@@ -100,7 +100,7 @@ const RestaurantDetails = () => {
               >Food Category</Typography>
               <FormControl className="py-10 space-y-5 " component={"fieldset"}>
                 <RadioGroup name="food_catagories" value={foodCategory} onChange={handleFilter} >
-                    {catagories.map((item)=> <FormControlLabel key={item} value={item} control={<Radio />} label={item} />)}
+                    {catagories.map((item,idx)=> <FormControlLabel key={idx} value={item} control={<Radio />} label={item} />)}
 
                 </RadioGroup>
               </FormControl>
@@ -109,7 +109,7 @@ const RestaurantDetails = () => {
         </div>
         <div className="space-y-5 lg:w-[80%] lg:pl-10">
 
-            {menu.map((item) => <MenuCard/>)}
+            {menu.map((item,idx) => <MenuCard key={idx}/>)}
        
         </div>
       </section>
